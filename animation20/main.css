@@ -1,0 +1,278 @@
+body {
+  background-color: #E36C4C;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  5% {
+    transform: rotate(10deg);
+  }
+
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  15% {
+    transform: rotate(10deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  35% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes clock {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  width: 400px;
+  height: 400px;
+  line-height: 300px;
+  z-index: 0;
+  animation-name: ring;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  margin: 50px auto;
+}
+
+.timer-leg-left {
+  position: absolute;
+  transform: rotate(25deg);
+  width: 50px;
+  height: 100px;
+  border-radius: 300px;
+  position: absolute;
+  bottom: 35px;
+  left: 100px;
+  background-color: #305D6D;
+}
+
+.timer-leg-right {
+  position: absolute;
+  transform: rotate(-25deg);
+  width: 50px;
+  height: 100px;
+  border-radius: 300px;
+  position: absolute;
+  bottom: 35px;
+  right: 100px;
+  background-color: #305D6D;
+}
+
+.timer-ringer-base-left {
+  position: absolute;
+  transform: rotate(-30deg);
+  width: 15px;
+  height: 100px;
+  border-radius: 300px;
+  position: absolute;
+  top: 10px;
+  left: 110px;
+  background-color: #305D6D;
+}
+
+.timer-ringer-base-right {
+  position: absolute;
+  transform: rotate(30deg);
+  width: 15px;
+  height: 100px;
+  border-radius: 300px;
+  position: absolute;
+  top: 10px;
+  right: 110px;
+  background-color: #305D6D;
+}
+
+.timer-ringer-left {
+  position: absolute;
+  height: 50px;
+  width: 110px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  transform: rotate(-30deg);
+  top: 20px;
+  left: 55px;
+  background: #BDC6BD;
+}
+
+.timer-ringer-right {
+  position: absolute;
+  height: 50px;
+  width: 110px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  transform: rotate(30deg);
+  top: 20px;
+  right: 55px;
+  background: #BDC6BD;
+}
+
+.timer-ring-top {
+  border-radius: 300px;
+  position: absolute;
+  height: 100px;
+  width: 15px;
+  top: 10px;
+  left: 195px;
+  background: #305D6D;
+}
+
+.timer-ring-top-circle {
+  border-radius: 300px;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 0px;
+  left: -7.5px;
+  background: #305D6D;
+}
+
+.timer-base {
+  background-color: #305D6D;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  z-index: 1;
+}
+
+.timer-base-inside {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.timer-base-inside-coremin {
+  background-color: #4A4A4A;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 105px;
+  left: 105px;
+  animation-name: clock;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.timer-base-inside-minutes {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: -80px;
+  left: 10px;
+  border-width: 0 10px 100px 10px;
+  border-color: transparent transparent #4A4A4A transparent;
+}
+
+.timer-base-inside-corehour {
+  background-color: #4A4A4A;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 105px;
+  left: 105px;
+  animation-name: clock;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.timer-base-inside-hours {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  border-width: 0 10px 70px 10px;
+  border-color: transparent transparent #4A4A4A transparent;
+}
+
+.timer-base-3oclock {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #31B58C;
+  top: 190px;
+  right: 100px;
+  z-index: 10;
+}
+
+.timer-base-6oclock {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #31B58C;
+  top: 290px;
+  left: 190px;
+  z-index: 10;
+}
+
+.timer-base-9oclock {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #31B58C;
+  top: 190px;
+  left: 100px;
+  z-index: 10;
+}
+
+.timer-base-12oclock {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #31B58C;
+  top: 90px;
+  left: 190px;
+  z-index: 10;
+}
